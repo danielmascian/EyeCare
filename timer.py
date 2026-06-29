@@ -25,6 +25,7 @@ class Timer:
         if self.timer_id is not None:
             self.root.after_cancel(self.timer_id)
             self.timer_id = None
+            self.label.config(text=f"Minutes: {0}, Seconds: {0}")
 
     def update_label(self):
         minutes, seconds = divmod(self.time_left, 60)
